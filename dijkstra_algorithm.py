@@ -97,37 +97,15 @@ class Graph:
 def main():
     """Runs a few simple tests to verify the implementation.
     """
-    verify_algorithm(
-        filename="simple_graph.txt",
-        start="A",
-        end="G",
-        path=["A", "D", "E", "G"],
-        distance=11,
-    )
-    verify_algorithm(
-        filename="seattle_area.txt",
-        start="Renton",
-        end="Redmond",
-        path=["Renton", "Factoria", "Bellevue", "Northup", "Redmond"],
-        distance=16,
-    )
-    verify_algorithm(
-        filename="seattle_area.txt",
-        start="Seattle",
-        end="Redmond",
-        path=["Seattle", "Eastlake", "Northup", "Redmond"],
-        distance=15,
-    )
-    verify_algorithm(
-        filename="seattle_area.txt",
-        start="Eastlake",
-        end="Issaquah",
-        path=["Eastlake", "Seattle", "SoDo", "Factoria", "Issaquah"],
-        distance=21,
-    )
 
 
-def verify_algorithm(filename, start, end, path, distance):
+    izracunaj(
+        filename="varazdin_student.txt",
+        start="Dom",
+        end="Sjever"
+    )
+
+def izracunaj(filename, start, end):
     """Helper function to run simple tests and print results to console.
 
     filename = graph definition file
@@ -137,14 +115,12 @@ def verify_algorithm(filename, start, end, path, distance):
     """
     graph = Graph(filename)
     returned_path, returned_distance = graph.shortest_path(start, end)
-
-    assert list(returned_path) == path
-    assert returned_distance == distance
-
-    print('\ngraph definition file: {0}'.format(filename))
-    print('      start/end nodes: {0} -> {1}'.format(start, end))
-    print('        shortest path: {0}'.format(path))
-    print('       total distance: {0}'.format(distance))
+    print('__________________________________________________________________________________')
+    print('Ime datoteke koristene: {0}'.format(filename))
+    print('Zadana pocetna i krajnja tocka: {0} -> {1}'.format(start, end))
+    print('\t\tIzračunati najkraći put: {0}'.format(returned_path))
+    print('\t\tUkupna udaljenost: {0}'.format(returned_distance))
+    print('__________________________________________________________________________________')
 
 
 if __name__ == "__main__":
