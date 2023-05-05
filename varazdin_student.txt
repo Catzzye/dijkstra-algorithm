@@ -14,5 +14,5 @@ Dom Menza 1
 Menza Dom 1
 Menza Zeljeznicki 4
 Zeljeznicki Menza 4
-Zeljeznicki FOI1 12
-FOI1 Zeljeznicki 12
+Zeljeznicki FOI1 17
+FOI1 Zeljeznicki 17

@@ -105,6 +105,12 @@ def main():
         end="Sjever"
     )
 
+    izracunaj(
+        filename="varazdin_student.txt",
+        start="Autobusni",
+        end="Zeljeznicki"
+    )
+
 def izracunaj(filename, start, end):
     """Helper function to run simple tests and print results to console.
 
