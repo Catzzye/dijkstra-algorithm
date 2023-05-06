@@ -98,6 +98,24 @@ def main():
     """Runs a few simple tests to verify the implementation.
     """
 
+    izracunaj(
+        filename="primjer.txt",
+        start="A",
+        end="C"
+    )
+    
+    izracunaj(
+        filename="primjer.txt",
+        start="A",
+        end="D"
+    )
+    
+    izracunaj(
+        filename="primjer.txt",
+        start="D",
+        end="C"
+    )
+
 
     izracunaj(
         filename="varazdin_student.txt",
@@ -122,10 +140,10 @@ def izracunaj(filename, start, end):
     graph = Graph(filename)
     returned_path, returned_distance = graph.shortest_path(start, end)
     print('__________________________________________________________________________________')
-    print('Ime datoteke koristene: {0}'.format(filename))
-    print('Zadana pocetna i krajnja tocka: {0} -> {1}'.format(start, end))
+    print('Ime datoteke korištene: {0}'.format(filename))
+    print('Zadani početni i krajnji čvor: {0} -> {1}'.format(start, end))
     print('\t\tIzračunati najkraći put: {0}'.format(returned_path))
-    print('\t\tUkupna udaljenost: {0}'.format(returned_distance))
+    print('\t\tUkupna udaljenost od početnog do krajnjeg čvora: {0}'.format(returned_distance))
     print('__________________________________________________________________________________')
 
 
